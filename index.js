@@ -2,13 +2,18 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 })
 
 app.post('/', (req, res) => {
-  res.send(`Thank you for stopping by. I'm excited that you're here, but your result isn't ready yet.`)
+  let weight = req.body.weight;
+  let height = req.body.height;
+
+  let result = ((weight * 703) / (height**2));
+  res.send(`<h1 style="color: #B20600; text-align: center;">Your BMI is ${result}. Congratulations!</h1>`)
 })
 
 app.listen(port, () => {

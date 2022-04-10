@@ -3,14 +3,54 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link type="text/css" href="styles.css"> -->
     <title>BMI Calculator</title>
+    <style>
+      body {
+        background-color: #F7E2E2;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      h1 {
+        color: #1A132F;
+      }
+      .center {
+        text-align: center;
+      }
+      .container {
+        padding-top: 20px;
+        margin: 0 auto;
+        background-color: #61A4BC;
+        color: #FDF6EC;
+        width: 400px;
+        height: 300px;
+        box-shadow: 5px 5px 15px #aaa;
+        border-radius: 2px;
+      }
+      input {
+        margin: 10px;
+        border: none;
+        padding: 5px;
+        border-radius: 1px;
+      }
+      button {
+        border: none;
+        padding: 10px;
+        background-color: #5B7DB1;
+        color: #FDF6EC;
+        border-radius: 2px;
+      }
+    </style>
   </head>
   <body>
-    <h1>BMI Calculator</h1>
-    <form action="/" method="post">
-      <input type="text" name="" placeholder="">
-      <input type="text" name="" placeholder="">
-      <button type="submit" name="submit">Calculate BMI</button>
-    </form>
+    <h1 class="center">BMI Calculator</h1>
+    <div class="container center">
+      <form action="/" method="post">
+        <label>Please enter your weight:</label><br>
+        <input type="text" name="weight" placeholder=""><br>
+        <label>Please enter your height:</label><br>
+        <input type="text" name="height" placeholder=""><br>
+        <button type="submit" name="submit">Calculate BMI</button>
+      </form>
+    </div>
   </body>
 </html>

@@ -12,7 +12,7 @@ app.post('/', (req, res) => {
   let weight = req.body.weight;
   let height = req.body.height;
 
-  let result = ((weight * 703) / (height**2));
+  let result = Math.floor((weight * 703) / (height**2));
   res.send(`<h1 style="color: #B20600; text-align: center;">Your BMI is ${result}. Congratulations!</h1>`)
 })
 

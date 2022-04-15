@@ -4,7 +4,7 @@
   "description": "A BMI calculator for those people who want to know their BMI",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "author": "Aminah Burch",
   "license": "ISC",
